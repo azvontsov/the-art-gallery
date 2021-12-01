@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */
+  background-image: url("https://images.unsplash.com/photo-1565452171067-f2b1384f958d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Cairo", sans-serif;
+}
+
+header {
+  background: rgb(223, 49, 49);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  box-shadow: 0 6px 15px rgb(36 37 38 / 70%);
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: large;
+  color: white;
+}
+p {
+  color: white;
+}
+
+/* Index */
+
+.parent-white {
+  display: flex;
+
+  margin: 1rem;
+}
+.card-yellow {
+  background: yellow;
+  box-shadow: 0 6px 15px rgb(36 37 38 / 70%);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+}
+.del-edit {
+  display: flex;
+  width: 100%;
+  justify-content: stretch;
+  margin: 2rem auto;
+}
+.visual-pink {
+  background-color: pink;
+  object-fit: cover;
+}
+
+img {
+  max-width: 90%;
+  max-height: 70%;
+  border-radius: 5px;
+  display: block;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: white;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+/* Show */
+.card-yellow-show {
+  background-color: rgb(77, 70, 99);
+  flex-grow: 1;
+  align-items: center;
+  padding: 1%;
+  width: 300px;
+
+  border-radius: 5px;
+  margin: 2%;
+  box-shadow: 0 6px 15px rgb(36 37 38 / 70%);
+}
+
+.parent-white-show {
+  display: flex;
+  flex-direction: column;
+}
+
+main [class="main-show"] {
+  justify-content: center;
+}
+div [class="img-show"] img {
+  max-width: 120%;
+  margin: 2%;
+  box-shadow: 0 6px 15px rgb(36 37 38 / 70%);
+}
+
+/* New */
+.card-yellow-new {
+  background-color: yellow;
+  flex-grow: 1;
+  padding: 2%;
+  width: 300px;
+
+  border-radius: 5px;
+  margin: 40% 0;
+  box-shadow: 0 6px 15px rgb(36 37 38 / 70%);
+}
+
+/* Edit */
+.card-yellow-edit {
+  background-color: yellow;
+  flex-grow: 1;
+
+  padding: 2%;
+  width: 300px;
+
+  border-radius: 5px;
+  margin: 40% 0;
+  box-shadow: 0 6px 15px rgb(36 37 38 / 70%);
+}
+
+/* Foooter */
+
+footer {
+  background-color: #4d4663;
+  padding: 0.5rem;
+  box-shadow: 0 6px 15px rgb(36 37 38 / 70%);
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.btn-grad {
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
