@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs')%>
+    <title>Product List</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>My Products List</h1>
+      <a href="/paintings/new"
+        ><button class="btn-grad">Add a New Product</button></a
+      >
+    </header>
+    <main>
+      <% paintings.forEach(elem => { %>
+      <div class="parent-white">
+        <div class="card-yellow">
+          <!-- <a href="/products/<%= elem._id %>"> <%= elem.name %> </a>
+          <p href="/paintings/<%= elem.price %>">Price: $<%= elem.price %></p> -->
+          <img src="<%= elem.img %>" alt="<%= elem.img %>" />
+        </div>
+      </div>
+      <% }) %>
+    </main>
+    <footer><%- include('./partials/footer.ejs')%></footer>
+  </body>
+</html>
