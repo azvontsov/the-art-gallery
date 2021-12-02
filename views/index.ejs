@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('./partials/head.ejs')%>
-    <title>Product List</title>
-  </head>
 
-  <body>
-    <header>
-      <h1>My Products List</h1>
-      <a href="/paintings/new"
-        ><button class="btn-grad">Add a New Product</button></a
-      >
-    </header>
-    <main>
+<head>
+  <%- include('./partials/head.ejs')%>
+  <title>Product List</title>
+</head>
+
+<body>
+  <header class="text">
+    <h1><span></span>The ART GALLERY</span></h1>
+    <a href="/paintings/new"><button class="btn-grad">Add a New Product</button></a>
+  </header>
+  <main>
+    <div class="main-1">
+      <h1>The Most Expensive Paintings In the World</h1>
+      <div class="index">
+        <% paintings.forEach(elem => { %>
+        <ul>
+          <li><a href="/paintings/<%= elem._id %>"> <%= elem.name %> </a></li>
+        </ul>
+        <% }) %>
+      </div>
+    </div>
+    <div class="main-2">
       <% paintings.forEach(elem => { %>
       <div class="parent-white">
         <div class="card-yellow">
-          <!-- <a href="/products/<%= elem._id %>"> <%= elem.name %> </a>
-          <p href="/paintings/<%= elem.price %>">Price: $<%= elem.price %></p> -->
+
           <img src="<%= elem.img %>" alt="<%= elem.img %>" />
         </div>
       </div>
       <% }) %>
-    </main>
-    <footer><%- include('./partials/footer.ejs')%></footer>
-  </body>
+    </div>
+  </main>
+  <footer><%- include('./partials/footer.ejs')%></footer>
+</body>
+
 </html>
