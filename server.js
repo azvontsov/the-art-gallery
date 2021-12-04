@@ -6,7 +6,6 @@ const paintingsController = require('./controllers/paintings');
 
 
 
-
 // Initialize app
 const app = express();
 
