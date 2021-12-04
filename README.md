@@ -20,6 +20,7 @@ AAU, I should be able to click on a navigation link to add a new painting and be
 ## Screenshots
 
 ![Imgur Image](https://imgur.com/XsJ19fd.png)
+![Imgur Image](https://imgur.com/a9rM5JO.png)
 ![Imgur Image](https://imgur.com/IgHQRQy.png)
 
 ## Getting Started
