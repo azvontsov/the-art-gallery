@@ -7,35 +7,35 @@
     <link rel="stylesheet" href="/scroll.css" />
   </head>
   <body>
- 
-    <header class="header show-on-scroll">
+    <header class="text">
+      <h1><span></span>The ART GALLERY</span></h1>
+      <a href="/paintings/"><button>Back to the main</button></a>
+    </header>
+    <main class="main show-on-scroll">
       <div>
         <img
-          src="<%= painting.img %>"
+          src="<%= painting.image %>"
           class="blur-round-img"
         />
       </div>
-      <div></div>
-      </div>
-      <p class="rating-text">
-        Number <%= painting.rating %> in world rating
-        </p>
+      
+     
       <h1 class="heading"><%= painting.artist %></h1>
-    </header>
+    </main>
 
     
     <article class="content">
-      <h2><%= painting.name %></h2>
-      <h3>$<%= painting.price %> million</h3>
+      <h2><%= painting.title %></h2>
+      <h2><%= painting.date %></h2>
+      <h2><%= painting.medium %></h2>
       
-        <p>Year: <%= painting.year %></p>
-        <p>Medium: <%= painting.medium %></p>
-        <p>Style: <%= painting.style %></p>
-        <p>Owner: <%= painting.owner %></p>
+   
       
-      <a href="/paintings/new"><button>Add a New Product</button></a>
-      <img
-        src="<%= painting.img %>"
+        
+      
+        <a href="/paintings/<%= painting._id %>/edit">Edit Painting</a>
+      <img onclick="window.open(this.src)"
+        src="<%= painting.image %>"
         alt="<%= painting.name %>"
         class="inline-img show-on-scroll"
       />
@@ -43,7 +43,6 @@
       <footer><%- include('./partials/footer.ejs')%></footer>
     <script>
         let elementsToShow = document.querySelectorAll(".show-on-scroll");
-
       function loop() {
         elementsToShow.forEach(function (element) {
           if (isElementInViewport(element)) {
@@ -52,13 +51,10 @@
             element.classList.remove("is-visible");
           }
         });
-
         scroll(loop);
       }
-
       // Call the loop for the first time
       loop();
-
  
       function isElementInViewport(el) {
       

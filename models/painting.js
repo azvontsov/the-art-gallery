@@ -1,22 +1,17 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 //define the schema
-const paintingSchema = new Schema({
-    rating: Number,
-    name: String,
-    artist: String,
-    life: String,
-    year: Number,
-    medium: String,
-    style: String,
-    dimensions: String,
-    owner: String,
-    price: Number,
-    img: String,
-    sold: Boolean,
+const transformArtwork = new Schema({
+  name: String,
+  title: String,
+  life: String,
+  date: Number,
+  dimensions: String,
+  image: String,
+  medium: String,
 });
 
 // export the model to be accessed in server.js
-const Painting = mongoose.model('Painting', paintingSchema);
+const Painting = mongoose.model("Painting", transformArtwork);
 module.exports = Painting;

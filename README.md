@@ -25,4 +25,10 @@ AAU, I should be able to click on a navigation link to add a new painting and be
 
 ## Getting Started
 
+```
+npm install
+npm run seed # seed the database
+npm run start
+```
+
 ## Future Enchancements

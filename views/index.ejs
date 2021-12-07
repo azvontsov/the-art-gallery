@@ -3,35 +3,38 @@
 
 <head>
   <%- include('./partials/head.ejs')%>
+  <link rel="stylesheet" href="/index.css" />
   <title>Product List</title>
 </head>
 
 <body>
   <header class="text">
     <h1><span></span>The ART GALLERY</span></h1>
-    <a href="/paintings/new"><button>Add a New Product</button></a>
+    <a href=""><button>Sign in | Log in</button></a>
   </header>
   <main>
     <div class="main-1">
+      <article class="content">
       <h1>The Most Expensive Paintings In the World</h1>
       <div class="index">
         <% paintings.forEach(elem => { %>
-        <ul>
-          <li><a href="/paintings/<%= elem._id %>"> <%= elem.name %> </a></li>
-        </ul>
+          <p><a href="/paintings/<%= elem._id %>"> <%= elem.title %> </a></p>
         <% }) %>
       </div>
+      <a href="/paintings/new"><button>Add New Painting</button></a>
+      
     </div>
     <div class="main-2">
       <% paintings.forEach(elem => { %>
       <div class="parent-white">
         <div class="card-yellow">
-
-          <img src="<%= elem.img %>" alt="<%= elem.img %>" />
+          <img onclick="window.open(this.src)" src="<%= elem.image %>" alt="<%= elem.img %>" />
         </div>
       </div>
       <% }) %>
+     
     </div>
+  </article>
   </main>
   <footer><%- include('./partials/footer.ejs')%></footer>
 </body>

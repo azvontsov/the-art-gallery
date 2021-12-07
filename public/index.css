@@ -13,27 +13,31 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
-  font-family: "Abril Fatface", cursive;
+
   color: rgb(255, 255, 255);
 }
-
+h1 {
+  font-family: "Avenir Next", Open Sans, sans-serif;
+}
+/* Index */
 /* MAIN */
 main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 90vh;
 }
 img {
   max-height: 100%;
   display: block;
 }
 
-/* Index */
 .main-1 {
   width: 50%;
   padding: 3rem;
   align-items: center;
 }
+
 ul {
   list-style-type: none; /* Remove bullets */
   padding: 0; /* Remove padding */
@@ -64,23 +68,7 @@ div [class="index"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 130px;
-}
-/* SHOW */
-.wall {
-  background-color: sienna;
-}
-figure {
-  display: flex;
-}
-figure img {
-  height: 500px;
-}
-.figcaption {
-  background-color: yellow;
-  text-align: left;
-  cursor: -webkit-zoom-in;
-  height: 25vh;
+  height: 200px;
 }
 
 /* FOOTER */
@@ -92,4 +80,22 @@ footer {
   margin: 4em auto;
   max-width: 740px;
   width: 80%;
+}
+
+/* Text styles */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"),
+    url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff)
+      format("woff");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+    url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff)
+      format("woff");
 }
