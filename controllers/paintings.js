@@ -15,15 +15,20 @@ paintingsRouter.get("/destroy-data", async (req, res) => {
 
 // Index route
 paintingsRouter.get("/", (req, res) => {
-  const pageSize = 4; // limit
-  const pageNum = 1; // skip
+  const pageSize = parseInt(req.query.pageSize || "4"); // limit
+  const pageNum = parseInt(req.query.pageNum || "0"); // skip
   Painting.find(
     {},
     null,
     { limit: pageSize, skip: pageNum * pageSize },
     (err, allPaintings) => {
+      const totalRecords = 28;
+      const hasNextPage = (pageNum + 1) * pageSize < totalRecords; // TODO actually calculate this
       res.render("index.ejs", {
         paintings: allPaintings,
+        pageNum,
+        pageSize,
+        hasNextPage,
       });
     }
   );
