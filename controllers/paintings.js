@@ -15,11 +15,18 @@ paintingsRouter.get("/destroy-data", async (req, res) => {
 
 // Index route
 paintingsRouter.get("/", (req, res) => {
-  Painting.find({}, (err, allPaintings) => {
-    res.render("index.ejs", {
-      paintings: allPaintings,
-    });
-  });
+  const pageSize = 4; // limit
+  const pageNum = 1; // skip
+  Painting.find(
+    {},
+    null,
+    { limit: pageSize, skip: pageNum * pageSize },
+    (err, allPaintings) => {
+      res.render("index.ejs", {
+        paintings: allPaintings,
+      });
+    }
+  );
 });
 
 //New route
