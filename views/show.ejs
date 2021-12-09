@@ -3,13 +3,13 @@
   <head>
     <title>The Art Gallery</title>
 
-    <link rel="stylesheet" href="/main.css" />
-    <link rel="stylesheet" href="/scroll.css" />
+    <link rel="stylesheet" href="/show.css" />
+   
   </head>
   <body>
     <header class="text">
       <h1><span></span>The ART GALLERY</span></h1>
-      <a href="/paintings/"><button>Back to the main</button></a>
+      <a href="/paintings/"><button class="home-btn">Back to the main</button></a>
     </header>
     <main class="main show-on-scroll">
       <div>
@@ -18,22 +18,16 @@
           class="blur-round-img"
         />
       </div>
-      
-     
-      <h1 class="heading"><%= painting.artist %></h1>
+      <h2 class="heading"><%= painting.title %></h2>
     </main>
-
-    
     <article class="content">
-      <h2><%= painting.title %></h2>
-      <h2><%= painting.date %></h2>
-      <h2><%= painting.medium %></h2>
+      <h3>Date: <%= painting.date %></h3>
+      <h3>Medium: <%= painting.medium %></h3>
+      <h3>Dimensions: <%= painting.dimensions %></h3>
+      <h3>Owner: <%= painting.owner %></h3>
+      <h3>Category: <%= painting.category %></h3> <br>
       
-   
-      
-        
-      
-        <a href="/paintings/<%= painting._id %>/edit">Edit Painting</a>
+      <a href="/paintings/<%= painting._id %>/edit">Edit Painting</a>
       <img onclick="window.open(this.src)"
         src="<%= painting.image %>"
         alt="<%= painting.name %>"
