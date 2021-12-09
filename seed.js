@@ -30,29 +30,33 @@ const getArtworks = async (limit) => {
     const res = await api.get(next);
     artworks.push(...res.data._embedded.artworks);
     next = res.data._links.next.href;
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    await new Promise((resolve) => setTimeout(resolve, 100));
   }
 
   return artworks;
 };
 
 const transformArtwork = (artwork) => {
-  const name = artwork._links.artists;
   const title = artwork.title;
   const date = artwork.date;
-  const dimensions = artwork.dimensions;
+  const dimensions = artwork.dimensions.in.text;
   const image = artwork._links.image.href.replace("{image_version}", "larger");
   const medium = artwork.medium;
-  //console.log(artwork);
+  const name = artwork.slug;
+  const owner = artwork.collecting_institution;
+  const category = artwork.category;
+  // console.log(artwork);
   // TODO get the necessary data from the artwork object
   // TODO return artwork data in correct schema
   return {
-    name,
     title,
     date,
     dimensions,
     image,
     medium,
+    name,
+    owner,
+    category,
   };
 };
 
@@ -72,7 +76,7 @@ const loadArtworksIntoDb = (artworks) => {
   Painting.collection.insertMany(artworks, () => mongoose.connection.close());
 };
 
-getArtworks(30).then((artworks) => {
+getArtworks(5).then((artworks) => {
   // transform artworks to correct schema
   const transformedArtworks = artworks.map(transformArtwork);
 
