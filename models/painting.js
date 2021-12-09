@@ -3,13 +3,14 @@ const Schema = mongoose.Schema;
 
 //define the schema
 const transformArtwork = new Schema({
-  name: String,
   title: String,
-  life: String,
-  date: Number,
-  dimensions: String,
-  image: String,
+  date: String,
   medium: String,
+  dimensions: String,
+  name: String,
+  owner: String,
+  image: String,
+  category: String,
 });
 
 // export the model to be accessed in server.js
