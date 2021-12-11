@@ -5,7 +5,8 @@ const indexRouter = require("express").Router();
 indexRouter.get("/", (req, res) => {
   req.session.destroy(() => {
     console.log(req.session);
-    res.render("home.ejs");
+    // res.render("home.ejs");
+    res.render("login.ejs");
   });
 });
 
