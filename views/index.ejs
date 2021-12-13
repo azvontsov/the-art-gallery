@@ -8,15 +8,15 @@
 </head>
 
 <body>
+  <div class="mainContainer">
   <header class="text">
     <h1><span></span>The ART GALLERY</span></h1>
     <div>
-      
       <a href="/logout"><button>Logout</button></a>
-
     </div>
   </header>
   <main>
+    <div id="container">
     <div class="main-1">
       <article class="content">
       <h1>The Most Expensive Paintings In the World</h1>
@@ -37,17 +37,20 @@
     </div>
     <div class="main-2">
       <% paintings.forEach(elem => { %>
-      <div class="parent-white">
-        <div class="card-yellow">
-          <img onclick="window.open(this.src)" src="<%= elem.image %>" alt="<%= elem.img %>" />
-        </div>
-      </div>
+        <figure class="effect-chico">
+          <div class="card-yellow">
+          <img class="inline-img"  src="<%= elem.image %>" alt="<%= elem.img %>" />
+          </div>
+      </figure>
       <% }) %>
      
     </div>
+  </div>
   </article>
   </main>
   <footer><%- include('./partials/footer.ejs')%></footer>
+</div>
+
 </body>
 
 </html>

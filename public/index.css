@@ -1,105 +1,129 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+* {
   margin: 0;
   padding: 0;
-  background-color: rgb(184, 184, 184);
-  font-family: "Lato", Calibri, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  color: #333;
+  box-sizing: border-box;
+  /* create a border around a box or padding */
 }
-/* HEADER */
+
+html,
+body {
+  min-height: 100vh;
+  background-color: beige;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 header {
-  background: rgb(231, 0, 35);
+  background-color: rgb(232, 6, 6);
+  color: white;
   display: flex;
   justify-content: space-around;
-  align-items: baseline;
-
-  color: rgb(255, 255, 255);
+  height: 6rem;
+  align-items: center;
 }
-h1 {
-  font-family: "Avenir Next", Open Sans, sans-serif;
+header h1 {
+  font-size: 3rem;
 }
-/* Index */
-/* MAIN */
-main {
+#container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  height: 90vh;
-}
-img {
-  max-height: 100%;
-  display: block;
+  background-color: rgb(210, 210, 210);
+  height: 80vh;
 }
 
 .main-1 {
-  width: 50%;
-  padding: 3rem;
-  align-items: center;
-  height: 70vh;
-  overflow-y: scroll;
-}
-
-ul {
-  list-style-type: none; /* Remove bullets */
-  padding: 0; /* Remove padding */
-  text-align: right;
-}
-div [class="index"] {
-  background-color: rgb(215, 193, 70);
-  margin-left: auto;
-  margin-right: 0;
-}
-.main-2 {
-  width: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 3rem;
-  padding: 1rem;
-  height: 80vh;
-  overflow-y: scroll;
-}
-.parent-white {
-  display: flex;
-
-  margin: 1rem;
-}
-.card-yellow {
-  background: rgb(255, 204, 0);
-
-  padding: 0.1rem;
+  width: 35%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 200px;
+  padding: 7rem;
+
+  background-color: yellow;
+}
+.main-2 {
+  overflow-x: scroll;
+  padding: 7rem;
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.card-yellow {
+  height: 15rem;
+  margin: 1rem;
+}
+.inline-img {
+  max-height: 100%;
+  display: block;
+  border-top: 1rem solid #1f1e1d;
+  border-left: 1rem solid #464341;
+  border-right: 1rem solid #35312d;
+  border-bottom: 1rem solid #53504d;
+  box-shadow: 1em 1em 2em 0.25em rgba(0, 0, 0, 0.4);
 }
 
-/* FOOTER */
-footer {
-  background-color: rgb(74, 49, 95);
+.main-2 figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  border-top: 1rem solid #1f1e1d;
+  border-left: 1rem solid #464341;
+  border-right: 1rem solid #35312d;
+  border-bottom: 1rem solid #53504d;
+}
+/* Chicco */
+figure.effect-chico img {
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
-.content {
-  margin: 4em auto;
-  max-width: 740px;
-  width: 80%;
+figure.effect-chico:hover img {
+  -webkit-transform: scale(1);
+  transform: scale(1.5);
+  z-index: 10;
 }
 
-/* Text styles */
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Open Sans"), local("OpenSans"),
-    url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff)
-      format("woff");
+figure.effect-chico figcaption {
+  padding: 3em;
 }
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: local("Open Sans Bold"), local("OpenSans-Bold"),
-    url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff)
-      format("woff");
+
+figure.effect-chico figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  border: 1px solid #fff;
+  content: "";
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+figure.effect-chico figcaption::before,
+figure.effect-chico p {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-chico h2 {
+  padding: 20% 0 20px 0;
+}
+
+figure.effect-chico p {
+  margin: 0 auto;
+  max-width: 200px;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+figure.effect-chico:hover figcaption::before,
+figure.effect-chico:hover p {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
