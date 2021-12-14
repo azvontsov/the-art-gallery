@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <header class="show-on-scroll">
+    <header>
       <h1>New Painting Page</h1>
       <a href="/paintings"
         ><button class="btn-grad">Go back to painting index</button></a
@@ -17,27 +17,43 @@
       <div class="form-structor">
         <div class="signup">
           <form action="/paintings" method="POST">
-            <label for="Name">Name:</label>
-            <input type="text" name="name" /><br /><br />
-            <label for="Name">Artist:</label>
-            <input type="text" name="artist" /><br /><br />
-            <label for="Name">Year:</label>
-            <input type="text" name="year" /><br /><br />
-            <label for="Name">Medium:</label>
-            <input type="text" name="medium" /><br /><br />
-            <label for="Name">Style:</label>
-            <input type="text" name="style" /><br /><br />
-            <label for="Name">Dimensions:</label>
-            <input type="text" name="dimensions" /><br /><br />
-            <label for="Name">Owner:</label>
-            <input type="text" name="owner" /><br /><br />
-            <label for="Name">Price:</label>
-            <input type="text" name="price" /><br /><br />
-            <label for="Name">Image:</label>
-            <input type="text" name="img" /><br /><br />
-            <label for="Name">Rating:</label>
-            <input type="text" name="rating" /><br /><br />
-            <input type="submit" name="" value="Add Painting" />
+            <div class="new-card">
+              <div class="row">
+                <div class="name"><label for="Name">Title:</label></div>
+                <div class="input"><input type="text" name="title" /></div>
+              </div>
+              <div class="row">
+                <div class="name"><label for="Name">Date:</label></div>
+                <div class="input"><input type="text" name="date" /></div>
+              </div>
+              <div class="row">
+                <div class="name"><label for="Name">Dimensions:</label></div>
+                <div class="input"><input type="text" name="dimensions" /></div>
+              </div>
+              <div class="row">
+                <div class="name"><label for="Name">Medium:</label></div>
+                <div class="input"><input type="text" name="medium" /></div>
+              </div>
+              <div class="row">
+                <div class="name"><label for="Name">Name:</label></div>
+                <div class="input"><input type="text" name="name" /></div>
+              </div>
+              <div class="row">
+                <div class="name"><label for="Name">Owner:</label></div>
+                <div class="input"><input type="text" name="owner" /></div>
+              </div>
+              <div class="row">
+                <div class="name"><label for="Name">Category:</label></div>
+                <div class="input"><input type="text" name="category" /></div>
+              </div>
+
+              <div class="row">
+                <div class="name"><label for="Name">Image:</label></div>
+                <div class="input"><input type="text" name="image" /></div>
+              </div>
+              <div class="add-btn"></div>
+              <input type="submit" name="" value="Add Painting" />
+            </div>
           </form>
         </div>
       </div>
