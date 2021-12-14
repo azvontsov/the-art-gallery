@@ -161,14 +161,3 @@ figure.effect-chico:hover p {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-/* Footer */
-footer {
-  background-color: rgb(63, 63, 63);
-  margin-bottom: 0;
-  height: 2rem;
-  color: white;
-  font-family: inherit;
-  font-size: 1rem;
-  text-align: center;
-  padding: 1rem;
-}
