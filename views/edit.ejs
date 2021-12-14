@@ -1,101 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap"
-      rel="stylesheet"
-    />
-    <title>Edit painting Page</title>
-  </head>
 
-  <body>
-    <header>
-      <h1>Edit Painting Page</h1>
-      <a href="/paintings"
-        ><button class="btn-grad">Go back to painting index</button></a
-      >
-    </header>
-    <div id="page-wrap">
-      <div id="contact-area">
-          <form
-            action="/paintings/<%= painting._id %>?_method=PUT"
-            method="POST"
-          >
-            <p>
-              Name:
-              <input type="text" name="name" value="<%= painting.name %>" />
-            </p>
-            <p>
-              Artist:
-              <input
-                type="text"
-                name="artist"
-                value="<%= painting.artist %>"
-              />
-            </p>
-            <p>
-              Year:
-              <input type="text" name="year" value="<%= painting.year %>" />
-            </p>
-            <p>
-              Medium:
-              <input
-                type="text"
-                name="medium"
-                value="<%= painting.medium %>"
-              />
-            </p>
-            <p>
-              Style:
-              <input
-                type="text"
-                name="style"
-                value="<%= painting.style %>"
-              />
-            </p>
-            <p>
-              Dimensions:
-              <input type="text" name="dimensions" value="<%= painting.dimensions %>" />
-            </p>
-            <p>
-              Owner:
-              <input type="text" name="owner" value="<%= painting.owner %>" />
-            </p>
-            <p>
-              Price:
-              <input type="text" name="price" value="<%= painting.price %>" />
-            </p>
-            <p>
-              Image:
-              <input type="text" name="img" value="<%= painting.img %>" />
-            </p>
-            <p>
-              Rating:
-              <input type="text" name="rating" value="<%= painting.rating %>" />
-            </p>
-            <p>
-              Sold: <input type="checkbox" name="Sold" <%= painting.sold ?
-              'checked' : '' %>
-            </p><br>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/edit.css" />
+  <title>Edit painting Page</title>
+</head>
+
+<body>
+  <header>
+    <h1>Edit Painting Page</h1>
+    <a href="/paintings"><button class="btn-grad">Go back to painting index</button></a>
+  </header>
+  <main>
+    <div class="form-structor">
+      <div class="signup">
+        <form action="/paintings/<%= painting._id %>?_method=PUT" method="POST">
+          <div class="new-card">
+            <div class="row">
+              <div class="name">Title:</div>
+              <div class="input"><input type="text" name="name" value="<%= painting.title %>" /></div>
+            </div>
+            <div class="row">
+              <div class="name">Date:</div>
+              <div class="input"><input type="text" name="name" value="<%= painting.date %>" /></div>
+            </div>
+            <div class="row">
+              <div class="name">Dimensions:</div>
+              <div class="input"><input type="text" name="name" value="<%= painting.dimensions %>" /></div>
+            </div>
+            <div class="row">
+              <div class="name">Image:</div>
+              <div class="input"><input type="text" name="name" value="<%= painting.image %>" /></div>
+            </div>
+            <div class="row">
+              <div class="name">Medium:</div>
+              <div class="input"><input type="text" name="name" value="<%= painting.medium %>" /></div>
+            </div>
+            <div class="row">
+              <div class="name">Name:</div>
+              <div class="input"><input type="text" name="name" value="<%= painting.dame %>" /></div>
+            </div>
+            <div class="row">
+              <div class="name">Owner:</div>
+              <div class="input"><input type="text" name="name" value="<%= painting.owner %>" /></div>
+            </div>
+            <div class="row">
+              <div class="name">Category:</div>
+              <div class="input"><input type="text" name="name" value="<%= painting.category %>" /></div>
+            </div>
+            
             <input type="submit" value="Edit painting" />
-          
-          </form>
-          <form
-          style="display: inline; margin-right: 1rem"
-          action="/paintings/<%= painting._id %>?_method=DELETE"
-          method="POST"
-        >
-          <input type="submit" value="DELETE" />
         </form>
-        </div>
+        <form  action="/paintings/<%= painting._id %>?_method=DELETE"
+          method="POST">
+          <input type="submit" value="DELETE" />
       </div>
-    </main>
-    <footer><%- include('./partials/footer.ejs')%></footer>
-  </body>
+      </form>
+    </div>
+    </div>
+  </main>
+  <footer><%- include('./partials/footer.ejs')%></footer>
+</body>
+
 </html>
+

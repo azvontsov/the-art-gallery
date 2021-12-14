@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* create a border around a box or padding */
+}
+
+html,
+body {
+  min-height: 80vh;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(#1f3327, #705e3e);
+}
+header {
+  background-color: rgb(232, 6, 6);
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  height: 6rem;
+  align-items: center;
+}
+header h1 {
+  font-size: 2rem;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.form-structor {
+  background-color: #222;
+  border-radius: 15px;
+  height: 600px;
+  width: 650px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 7rem;
+  color: #eee;
+  box-shadow: 1em 1em 2em 0.25em rgba(0, 0, 0, 0.4);
+}
+.form-structor::after {
+  content: "";
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-around;
+}
+.form-structor .signup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  width: 65%;
+  z-index: 5;
+  -webkit-transition: all 0.3s ease;
+}
+
+.new-card {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.3rem;
+}
+.new-card input {
+  width: 15rem;
+  height: 1.5rem;
+  margin: 1rem;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  justify-content: space-around;
+}
+.name {
+  height: 2.2rem;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+}
+.input {
+  height: 2.3rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+input[type="submit"] {
+  background-color: #1a2178;
+  height: 2.1rem;
+  margin-left: 6rem;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 10px;
+}
+/* Footer */
+footer {
+  background-color: rgb(63, 63, 63);
+  margin-bottom: 0;
+  height: 4rem;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 13rem;
+}
