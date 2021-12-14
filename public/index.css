@@ -26,9 +26,7 @@ header {
 header h1 {
   font-size: 3rem;
 }
-.mainContainer {
-  height: 100%;
-}
+
 #container {
   display: flex;
   flex-direction: row;
@@ -42,9 +40,10 @@ header h1 {
   display: flex;
   flex-direction: column;
   overflow-x: scroll;
+  margin-bottom: 1rem;
 }
 .index {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 .main-1 h1 {
   font-size: 2.5rem;
@@ -56,7 +55,6 @@ header h1 {
 
 .next-btn {
   margin-top: 3rem;
-  margin-left: 3rem;
 }
 .tab {
   background: linear-gradient(#1f3327, #705e3e);
@@ -107,6 +105,19 @@ header h1 {
   border-right: 1rem solid #35312d;
   border-bottom: 1rem solid #53504d;
 }
+
+/* Footer */
+footer {
+  background-color: rgb(63, 63, 63);
+  margin-bottom: 0;
+  height: 3rem;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
 /* Chicco */
 figure.effect-chico img {
   -webkit-transition: -webkit-transform 0.35s;

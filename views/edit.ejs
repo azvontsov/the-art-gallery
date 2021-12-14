@@ -15,41 +15,41 @@
     <a href="/paintings"><button class="btn-grad">Go back to painting index</button></a>
   </header>
   <main>
-    <div class="form-structor">
+    <div class="form-structor" src="<%= painting.image %>" >
       <div class="signup">
         <form action="/paintings/<%= painting._id %>?_method=PUT" method="POST">
           <div class="new-card">
             <div class="row">
               <div class="name">Title:</div>
-              <div class="input"><input type="text" name="name" value="<%= painting.title %>" /></div>
+              <div class="input"><input type="text" name="title" value="<%= painting.title %>" /></div>
             </div>
             <div class="row">
               <div class="name">Date:</div>
-              <div class="input"><input type="text" name="name" value="<%= painting.date %>" /></div>
+              <div class="input"><input type="text" name="date" value="<%= painting.date %>" /></div>
             </div>
             <div class="row">
               <div class="name">Dimensions:</div>
-              <div class="input"><input type="text" name="name" value="<%= painting.dimensions %>" /></div>
+              <div class="input"><input type="text" name="dimensions" value="<%= painting.dimensions %>" /></div>
             </div>
             <div class="row">
               <div class="name">Image:</div>
-              <div class="input"><input type="text" name="name" value="<%= painting.image %>" /></div>
+              <div class="input"><input type="text" name="image" value="<%= painting.image %>" /></div>
             </div>
             <div class="row">
               <div class="name">Medium:</div>
-              <div class="input"><input type="text" name="name" value="<%= painting.medium %>" /></div>
+              <div class="input"><input type="text" name="medium" value="<%= painting.medium %>" /></div>
             </div>
             <div class="row">
               <div class="name">Name:</div>
-              <div class="input"><input type="text" name="name" value="<%= painting.dame %>" /></div>
+              <div class="input"><input type="text" name="name" value="<%= painting.name %>" /></div>
             </div>
             <div class="row">
               <div class="name">Owner:</div>
-              <div class="input"><input type="text" name="name" value="<%= painting.owner %>" /></div>
+              <div class="input"><input type="text" name="owner" value="<%= painting.owner %>" /></div>
             </div>
             <div class="row">
               <div class="name">Category:</div>
-              <div class="input"><input type="text" name="name" value="<%= painting.category %>" /></div>
+              <div class="input"><input type="text" name="category" value="<%= painting.category %>" /></div>
             </div>
             
             <input type="submit" value="Edit painting" />

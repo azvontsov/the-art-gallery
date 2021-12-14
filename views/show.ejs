@@ -13,7 +13,7 @@
   </header>
   <main class="main show-on-scroll">
     <div class="heading-logo">
-      <h1 class="heading"><%= painting.title %></h1>
+      
       <img src="<%= painting.image %>" class="blur-round-img" />
     </div>
     <div class="paint-info">
@@ -22,6 +22,9 @@
           class="inline-img show-on-scroll" />
       </div>
       <div class="info-creds">
+        <div id="heading">
+          <h1 class="heading"><%= painting.title %></h1>
+        </div>
       <div class="info">
         <h3>Date: <%= painting.date %></h3>
         <h3>Medium: <%= painting.medium %></h3>

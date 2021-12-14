@@ -52,7 +52,6 @@ main {
   left: 0;
   background-repeat: no-repeat;
   background-position-x: 100%;
-
   background-size: 1000px;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/84/Gustav_Klimt_046.jpg");
   display: flex;
