@@ -31,10 +31,10 @@
 <!-- Buttons prev next -->
 <div class="next-btn"></div>
       <% if (pageNum>0) { %>
-        <a href="/paintings?pageNum=<%= pageNum-1 %>&pageSize=<%= pageSize %>"><button class="button-52">Previous Page</button></a>
+        <a href="/paintings?pageNum=<%= pageNum-1 %>&pageSize=<%= pageSize %>"><button>Previous Page</button></a>
       <% } %>
       <% if (hasNextPage) { %>
-        <a href="/paintings?pageNum=<%= pageNum+1 %>&pageSize=<%= pageSize %>"><button class="button-52">Next Page</button></a><br><br>
+        <a href="/paintings?pageNum=<%= pageNum+1 %>&pageSize=<%= pageSize %>"><button>Next Page</button></a><br><br>
       <% } %>
       <a href="/paintings/new"><button>Add New Painting</button></a>
     </div>
