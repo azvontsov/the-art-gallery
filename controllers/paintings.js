@@ -15,7 +15,7 @@ paintingsRouter.get("/destroy-data", async (req, res) => {
 
 // Index route
 paintingsRouter.get("/", (req, res) => {
-  const pageSize = parseInt(req.query.pageSize || "20"); // limit
+  const pageSize = parseInt(req.query.pageSize || "15"); // limit
   const pageNum = parseInt(req.query.pageNum || "0"); // skip
   Painting.find(
     {},
