@@ -76,7 +76,7 @@ const loadArtworksIntoDb = (artworks) => {
   Painting.collection.insertMany(artworks, () => mongoose.connection.close());
 };
 
-getArtworks(5).then((artworks) => {
+getArtworks(240).then((artworks) => {
   // transform artworks to correct schema
   const transformedArtworks = artworks.map(transformArtwork);
 
