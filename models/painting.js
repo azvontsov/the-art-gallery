@@ -5,11 +5,11 @@ const Schema = mongoose.Schema;
 const transformArtwork = new Schema({
   title: String,
   date: String,
-  medium: String,
   dimensions: String,
+  image: String,
+  medium: String,
   name: String,
   owner: String,
-  image: String,
   category: String,
 });
 
