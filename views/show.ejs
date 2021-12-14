@@ -1,73 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>The Art Gallery</title>
 
-    <link rel="stylesheet" href="/show.css" />
-   
-  </head>
-  <body>
-    <header class="text">
-      <h1><span></span>The ART GALLERY</span></h1>
-      <a href="/paintings/"><button class="home-btn">Back to the main</button></a>
-    </header>
-    <main class="main show-on-scroll">
-      <div>
-        <img
-          src="<%= painting.image %>"
-          class="blur-round-img"
-        />
+<head>
+  <title>The Art Gallery</title>
+  <link rel="stylesheet" href="/show.css" />
+</head>
+
+<body>
+  <header class="text">
+    <h1><span></span>The ART GALLERY</span></h1>
+    <a href="/paintings/"><button class="home-btn">Back to the main</button></a>
+  </header>
+  <main class="main show-on-scroll">
+    <div class="heading-logo">
+      <h1 class="heading"><%= painting.title %></h1>
+      <img src="<%= painting.image %>" class="blur-round-img" />
+    </div>
+    <div class="paint-info">
+      <div class="paint">
+        <img onclick="window.open(this.src)" src="<%= painting.image %>" alt="<%= painting.name %>"
+          class="inline-img show-on-scroll" />
       </div>
-      <h2 class="heading"><%= painting.title %></h2>
-    </main>
-    <article class="content">
-      <h3>Date: <%= painting.date %></h3>
-      <h3>Medium: <%= painting.medium %></h3>
-      <h3>Dimensions: <%= painting.dimensions %></h3>
-      <h3>Owner: <%= painting.owner %></h3>
-      <h3>Category: <%= painting.category %></h3> <br>
-      
-      <a href="/paintings/<%= painting._id %>/edit">Edit Painting</a>
-      <img onclick="window.open(this.src)"
-        src="<%= painting.image %>"
-        alt="<%= painting.name %>"
-        class="inline-img show-on-scroll"
-      />
-      
-      <footer><%- include('./partials/footer.ejs')%></footer>
-    <script>
-        let elementsToShow = document.querySelectorAll(".show-on-scroll");
-      function loop() {
-        elementsToShow.forEach(function (element) {
-          if (isElementInViewport(element)) {
-            element.classList.add("is-visible");
-          } else {
-            element.classList.remove("is-visible");
-          }
-        });
-        scroll(loop);
-      }
-      // Call the loop for the first time
-      loop();
- 
-      function isElementInViewport(el) {
-      
-        if (typeof jQuery === "function" && el instanceof jQuery) {
-          el = el[0];
-        }
-        let rect = el.getBoundingClientRect();
-        return (
-          (rect.top <= 0 && rect.bottom >= 0) ||
-          (rect.bottom >=
-            (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.top <=
-              (window.innerHeight || document.documentElement.clientHeight)) ||
-          (rect.top >= 0 &&
-            rect.bottom <=
-              (window.innerHeight || document.documentElement.clientHeight))
-        );
-      }
-    </script>
+      <div class="info-creds">
+      <div class="info">
+        <h3>Date: <%= painting.date %></h3>
+        <h3>Medium: <%= painting.medium %></h3>
+        <h3>Dimensions: <%= painting.dimensions %></h3>
+        <h3>Owner: <%= painting.owner %></h3>
+        <h3>Category: <%= painting.category %></h3>
+      </div>
+      <div>
+        <a href="/paintings/<%= painting._id %>/edit">Edit Painting</a>
+      </div>
+    </div>
 
-  </body>
+    </div>
+  </main>
+  <footer><%- include('./partials/footer.ejs')%></footer>
+  <script>
+    let elementsToShow = document.querySelectorAll(".show-on-scroll");
+
+    function loop() {
+      elementsToShow.forEach(function (element) {
+        if (isElementInViewport(element)) {
+          element.classList.add("is-visible");
+        } else {
+          element.classList.remove("is-visible");
+        }
+      });
+      scroll(loop);
+    }
+    // Call the loop for the first time
+    loop();
+
+    function isElementInViewport(el) {
+
+      if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+      }
+      let rect = el.getBoundingClientRect();
+      return (
+        (rect.top <= 0 && rect.bottom >= 0) ||
+        (rect.bottom >=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.top <=
+          (window.innerHeight || document.documentElement.clientHeight)) ||
+        (rect.top >= 0 &&
+          rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight))
+      );
+    }
+  </script>
+
+</body>
+
 </html>
