@@ -9,45 +9,79 @@
 html,
 body {
   min-height: 100vh;
-  background-color: beige;
+
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(63, 63, 63);
 }
 header {
   background-color: rgb(232, 6, 6);
   color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 6rem;
   align-items: center;
 }
 header h1 {
   font-size: 3rem;
 }
+.mainContainer {
+  height: 100%;
+}
 #container {
   display: flex;
   flex-direction: row;
   background-color: rgb(210, 210, 210);
-  height: 80vh;
+  height: 85vh;
+  background-image: url("https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80");
 }
 
 .main-1 {
-  width: 35%;
+  width: 40%;
   display: flex;
   flex-direction: column;
-  padding: 7rem;
+  overflow-x: scroll;
+}
+.index {
+  margin-top: 2rem;
+}
+.main-1 h1 {
+  font-size: 2.5rem;
+}
+.index p {
+  margin: 0 0 1rem 0;
+  font-size: 0.3rem;
+}
 
-  background-color: yellow;
+.next-btn {
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+.tab {
+  background: linear-gradient(#1f3327, #705e3e);
+  opacity: 90%;
+  border-radius: 1rem;
+  padding: 3rem 2rem 3rem 4rem;
+  width: 80%;
+  margin: 3rem 3rem 2rem 6rem;
+  box-shadow: 0.8em 0.8em 0.8em 0.25em rgba(0, 0, 0, 0.4);
+  color: white;
+}
+.tab a {
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 .main-2 {
   overflow-x: scroll;
-  padding: 7rem;
-  width: 65%;
+  padding: 4rem;
+  width: 60%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 .card-yellow {
   height: 15rem;
@@ -126,4 +160,15 @@ figure.effect-chico:hover p {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+/* Footer */
+footer {
+  background-color: rgb(63, 63, 63);
+  margin-bottom: 0;
+  height: 2rem;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
 }
