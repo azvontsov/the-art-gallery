@@ -19,7 +19,7 @@ body {
   min-height: 100vh;
 }
 header {
-  background-color: rgb(83, 144, 155);
+  background-color: rgb(107, 134, 154);
   color: white;
   display: flex;
   justify-content: space-evenly;
