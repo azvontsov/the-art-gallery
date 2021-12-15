@@ -44,7 +44,7 @@
       <% paintings.forEach(elem => { %>
         <figure class="effect-chico">
           <div class="card-yellow">
-          <img class="inline-img"  src="<%= elem.image %>" alt="<%= elem.img %>" />
+          <a href="/paintings/<%= elem._id %>"><img class="inline-img"  src="<%= elem.image %>" alt="<%= elem.img %>" /></a>
           </div>
       </figure>
       <% }) %>
