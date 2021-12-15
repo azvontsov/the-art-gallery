@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
 }
 header {
-  background-color: rgb(107, 134, 154);
+  background-color: rgb(235, 33, 205);
   color: white;
   display: flex;
   justify-content: space-evenly;
@@ -29,9 +29,9 @@ header h1 {
   font-size: 2rem;
 }
 main {
-  background-size: 150rem;
+  background-size: 2600px;
   background-repeat: no-repeat;
-  background-image: url("https://imgur.com/nigGFbn.jpg");
+  background-image: url("https://imgur.com/SIOWTnU.jpg");
   background-position-y: 100%;
   flex: 1;
 }
@@ -64,7 +64,7 @@ main {
 }
 .info-creds {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;gi
   width: 40rem;
   margin-right: 2rem;
 }
