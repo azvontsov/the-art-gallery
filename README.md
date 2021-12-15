@@ -41,4 +41,6 @@ npm run seed # seed the database
 npm run start
 ```
 
+[Click here](https://az-the-art-gallery.herokuapp.com/) to see the site live
+
 ## Future Enchancements
