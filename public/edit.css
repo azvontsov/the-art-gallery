@@ -8,11 +8,12 @@
 
 html,
 body {
-  min-height: 80vh;
+  min-height: 100vh;
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(#1f3327, #705e3e);
+  display: flex;
 }
 header {
   background-color: rgb(232, 6, 6);
@@ -30,6 +31,7 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  flex: 1;
 }
 .form-structor {
   /* background-color: rgb(70, 70, 70);
