@@ -22,13 +22,17 @@ header {
   background-color: rgb(65, 143, 238);
   color: white;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 6rem;
   align-items: center;
   font-family: inherit;
 }
 header h1 {
   font-size: 3rem;
+  margin-left: 10rem;
+}
+header button {
+  margin-right: 5rem;
 }
 
 #container {
