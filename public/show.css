@@ -13,9 +13,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(101, 101, 101);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 header {
-  background-color: rgb(232, 6, 6);
+  background-color: rgb(107, 134, 154);
   color: white;
   display: flex;
   justify-content: space-evenly;
@@ -30,6 +33,7 @@ main {
   background-repeat: no-repeat;
   background-image: url("https://imgur.com/nigGFbn.jpg");
   background-position-y: 100%;
+  flex: 1;
 }
 .heading-logo {
   height: 3rem;

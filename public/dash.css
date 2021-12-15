@@ -12,10 +12,10 @@ body {
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#1f3327, #705e3e);
+  background: linear-gradient(#17211c, #8a8471);
 }
 header {
-  background-color: rgb(232, 6, 6);
+  background-color: rgb(107, 134, 154);
   color: white;
   display: flex;
   justify-content: space-evenly;
