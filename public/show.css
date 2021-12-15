@@ -38,21 +38,9 @@ main {
 .heading-logo {
   height: 3rem;
 }
-#heading h1 {
-  font-size: 3rem;
-  color: rgb(69, 69, 69);
-  max-width: 50rem;
-  text-shadow: 1em 1em 2em 0.9em rgba(0, 0, 0, 0.8);
-  margin-bottom: 5rem;
-}
-.blur-round-img {
-  border-radius: 100%;
-  filter: blur(2px);
-  width: 15em;
-  height: 15em;
-  margin-top: 2rem;
-  margin-left: 75%;
-}
+
+/* INFO */
+
 .paint-info {
   display: flex;
   flex-direction: row;
@@ -106,7 +94,6 @@ button:hover {
   border-bottom: 3rem solid #53504d;
   box-shadow: 1em 1em 2em 0.25em rgba(0, 0, 0, 0.4);
   margin: 1em auto 10em;
-
   border-radius: 5px;
   opacity: 0;
   -webkit-transform: translateY(4em) rotateZ(-10deg);
