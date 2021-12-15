@@ -1,4 +1,4 @@
-# the_art_gallery
+# the-art-gallery
 
 A web site for searching images of most expensive paintings in the world.
 
@@ -16,6 +16,8 @@ AAU, I should be able to click on a navigation link to add a new painting and be
 - Google Fonts
 - Mongoose
 - Express
+- Heroku
+- Artsy API
 
 ## Screenshots
 
