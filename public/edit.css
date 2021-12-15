@@ -13,7 +13,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(#1f3327, #705e3e);
-  display: flex;
 }
 header {
   background-color: rgb(232, 6, 6);
@@ -31,12 +30,11 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  flex: 1;
 }
 .form-structor {
-  /* background-color: rgb(70, 70, 70);
+  background-color: rgb(70, 70, 70);
   background-size: 1000px;
-  background-image: url("https://d32dm0rphc51dk.cloudfront.net/2VgTXzq3A2p5vTxxosS4zg/larger.jpg"); */
+  background-image: url("https://d32dm0rphc51dk.cloudfront.net/2VgTXzq3A2p5vTxxosS4zg/larger.jpg");
   border-radius: 15px;
   height: 600px;
   width: 650px;
