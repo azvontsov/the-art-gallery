@@ -70,7 +70,7 @@ main {
 }
 .info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   background: none;
   border: solid 3px rgb(69, 69, 69);
